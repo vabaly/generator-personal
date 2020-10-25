@@ -4,11 +4,13 @@ import helpers from 'yeoman-test'
 
 describe('generator-personal:app', () => {
   beforeAll(() => {
-    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
-      projectName: 'name',
-      projectDescription: 'description',
-      username: 'username'
-    })
+    return helpers
+      .run(path.join(__dirname, '../../generators/app'))
+      .withPrompts({
+        projectName: 'name',
+        projectDescription: 'description',
+        username: 'username'
+      })
   })
 
   it('creates files', () => {
